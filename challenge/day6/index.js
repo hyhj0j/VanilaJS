@@ -1,0 +1,35 @@
+const select = document.querySelector("select");
+
+function selectCountry() {
+  const myCountry = select.value;
+
+  if (myCountry !== "default") {
+    localStorage.setItem("country", myCountry);
+  }
+}
+
+function init() {
+  selectCountry();
+}
+
+init();
+
+// import "./styles.css";
+
+// const select = document.querySelector(".js-select");
+
+// function handleChange() {
+//   const selected = select.value;
+//   localStorage.setItem("country", selected);
+// }
+
+// function loadCountries() {
+//   const selected = localStorage.getItem("country");
+//   if (selected) {
+//     const option = document.querySelector(`option[value="${selected}"]`);
+//     option.selected = true;
+//   }
+// }
+
+// loadCountries();
+// select.addEventListener("change", handleChange);
